@@ -76,6 +76,8 @@ ENV node_role "combined-node"
 ENV node_id "default"
 # The ethereum network polling interval  (in milliseconds)
 ENV ethereum_polling_interval ""
+# 将其设置为 `true` 以在块摄取期间禁用从以太坊节点并发获取收据。这将使用更少的批量请求。在 MacOS 上始终设置为 `true` 以避免 DNS 问题。
+ENV GRAPH_ETHEREUM_FETCH_TXN_RECEIPTS_IN_BATCHES "true"
 
 # The location of an optional configuration file for graph-node, as
 # described in ../docs/config.md
